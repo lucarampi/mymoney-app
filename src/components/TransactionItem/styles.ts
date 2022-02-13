@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import * as p from 'polished';
 
 export const DeleteButton = styled.button`
 display: flex;
