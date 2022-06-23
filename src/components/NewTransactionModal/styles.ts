@@ -5,7 +5,7 @@ export const Container = styled.form`
     h2{
         color: var(--text-title);
         font-size:1.5rem;
-        margin-botton: 2rem;
+        margin-bottom: 2rem;
     }
     input{
         width: 100%;
