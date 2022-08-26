@@ -56,6 +56,7 @@ export function NewTransactionModal() {
           type="text"
           placeholder="Titulo"
           name=""
+          required
           value={title}
           onChange={(event) => setTitle(event.target.value)}
         />
@@ -64,6 +65,7 @@ export function NewTransactionModal() {
           placeholder="Valor"
           min={0}
           name=""
+          required
           value={value}
           onChange={(event) => setValue(Number(event.target.value))}
         />
