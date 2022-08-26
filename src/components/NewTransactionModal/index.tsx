@@ -62,6 +62,7 @@ export function NewTransactionModal() {
         <input
           type="Number"
           placeholder="Valor"
+          min={0}
           name=""
           value={value}
           onChange={(event) => setValue(Number(event.target.value))}
