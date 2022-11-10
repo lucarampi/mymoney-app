@@ -51,10 +51,10 @@ export function NewTransactionModal() {
       </button>
 
       <Container onSubmit={hadleCreateNewTransaction}>
-        <h2>Nova Transação</h2>
+        <h2>New Transaction</h2>
         <input
           type="text"
-          placeholder="Titulo"
+          placeholder="Title"
           name=""
           required
           value={title}
@@ -62,7 +62,7 @@ export function NewTransactionModal() {
         />
         <input
           type="Number"
-          placeholder="Valor"
+          placeholder="Value"
           min={0}
           step={0.01}
           name=""
@@ -81,7 +81,7 @@ export function NewTransactionModal() {
             activeColor="deposit"
           >
             <img src={incomeImg} alt="Entrada" />
-            <span>Entrada</span>
+            <span>Income</span>
           </RadioBox>
 
           <RadioBox
@@ -93,7 +93,7 @@ export function NewTransactionModal() {
             activeColor="withdraw"
           >
             <img src={outcomeImg} alt="Saída" />
-            <span>Saída</span>
+            <span>Outcome</span>
           </RadioBox>
         </TransactionTypeContainer>
 
@@ -104,7 +104,7 @@ export function NewTransactionModal() {
           value={category}
           onChange={(event) => setCategory(event.target.value)}
         />
-        <button type="submit" onSubmit={hadleCreateNewTransaction}>Cadastrar</button>
+        <button type="submit" onSubmit={hadleCreateNewTransaction}>Register</button>
       </Container>
     </Modal>
   );

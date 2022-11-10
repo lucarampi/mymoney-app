@@ -48,7 +48,7 @@ export function Summary() {
     >
       <div>
         <header>
-          <p>Entradas</p>
+          <p>Income</p>
           <img src={incomeImg} alt="" />
         </header>
         <strong> {new Intl.NumberFormat(("pt-BR"),
@@ -56,7 +56,7 @@ export function Summary() {
       </div>
       <div>
         <header>
-          <p>Saídas</p>
+          <p>Outcome</p>
           <img src={outcomeImg} alt="" />
         </header>
         <strong>{new Intl.NumberFormat(("pt-BR"),

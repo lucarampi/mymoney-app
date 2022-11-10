@@ -10,7 +10,7 @@ const {handleOpenNewTransactionModal} = useNewTransactionModal();
     <Container>
       <Content>
         <img src={logoImg} alt="MyMoney App" />
-        <button type="button" onClick={handleOpenNewTransactionModal}>Nova Transação</button>
+        <button type="button" onClick={handleOpenNewTransactionModal}>New Transaction</button>
       </Content>
     </Container>
   );
