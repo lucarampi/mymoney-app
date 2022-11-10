@@ -37,16 +37,11 @@ img{
     filter: opacity(1);
 
 }
-// Switch to rows on large devices
-@media ${device.mobileL} {
-    flex-direction: row;
-  }
+
 `
 
 export const TableData = styled.td`
 
-// Switch to rows on large devices
 @media ${device.mobileL} {
-    flex-direction: row;
-  }
+display:none  }
 `
