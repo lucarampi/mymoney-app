@@ -99,7 +99,7 @@ export function NewTransactionModal() {
 
         <input
           type="text"
-          placeholder="Categoria"
+          placeholder="Category"
           name=""
           value={category}
           onChange={(event) => setCategory(event.target.value)}
