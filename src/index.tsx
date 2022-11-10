@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import { App } from "./App";
 import { createServer, Model } from "miragejs";
 
-function getStoredData(){
-  const data = localStorage.getItem("items")
-  if (!data) return []
-  return [...JSON.parse(data)]
+function getStoredData() {
+  const data = localStorage.getItem("items");
+  if (!data) {
+    localStorage.setItem("items", JSON.stringify(""));
+    return [];
+  }
+  return [...JSON.parse(data)];
 }
 
 createServer({
