@@ -38,10 +38,4 @@ img{
 
 }
 
-`
-
-export const TableData = styled.td`
-
-@media (max-width: ${device.mobileL}) {
-display:none  }
-`
+`;

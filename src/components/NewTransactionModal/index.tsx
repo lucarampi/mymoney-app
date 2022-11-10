@@ -38,7 +38,7 @@ export function NewTransactionModal() {
   return (
     <Modal
       isOpen={isOpen}
-      onRequestClose={hadleCreateNewTransaction}
+      onRequestClose={handleCloseNewTransactionModal}
       overlayClassName="react-modal-overlay"
       className="react-modal-content"
     >
@@ -103,7 +103,7 @@ export function NewTransactionModal() {
           value={category}
           onChange={(event) => setCategory(event.target.value)}
         />
-        <button type="submit">Cadastrar</button>
+        <button type="submit" onSubmit={hadleCreateNewTransaction}>Cadastrar</button>
       </Container>
     </Modal>
   );
