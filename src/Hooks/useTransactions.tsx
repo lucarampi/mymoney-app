@@ -37,16 +37,6 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
   useEffect(() => {
     api.get(`transactions`).then((response) => {
       setTransactions(() => {
-        // if (!response.data.transactions) {
-        //   const localStoredData = JSON.parse(
-        //     localStorage.getItem("items") || ""
-        //   );
-        //   return localStoredData
-        // }
-        // localStorage.setItem(
-        //   "items",
-        //   JSON.stringify(response.data.transactions)
-        // );
         return response.data.transactions;
       });
     });
