@@ -64,6 +64,7 @@ export function NewTransactionModal() {
           type="Number"
           placeholder="Valor"
           min={0}
+          step={0.01}
           name=""
           required
           value={value}
