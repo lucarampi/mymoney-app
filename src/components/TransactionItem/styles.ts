@@ -42,6 +42,6 @@ img{
 
 export const TableData = styled.td`
 
-@media ${device.mobileL} {
+@media (max-width: ${device.mobileL}) {
 display:none  }
 `
