@@ -9,25 +9,7 @@ createServer({
   },
   seeds(server) {
     server.db.loadData({
-      transactions: [
-        // Uncomment the following lines to seed the database with transactions
-        // {
-        //   id: 0,
-        //   createdAt: new Date("2022-02-10 22:00:00"),
-        //   title: "Freelance de Website",
-        //   value: 2000,
-        //   type: "deposit",
-        //   category: "Dev",
-        // },
-        // {
-        //   id: 1,
-        //   createdAt: new Date("2022-02-06 14:00:00"),
-        //   title: "Aluguel",
-        //   value: 860,
-        //   type: "withdraw",
-        //   category: "Casa",
-        // },
-      ],
+      transactions: [...JSON.parse(localStorage.getItem("items") ||"" )],
     });
   },
   routes() {
@@ -43,7 +25,7 @@ createServer({
 
     this.delete("/transactions/:id", (schema, request) => {
       const id = request.params.id;
-      schema.db.transactions.remove({id:id})
+      schema.db.transactions.remove({ id: id });
       return schema.db.transactions;
     });
   },
