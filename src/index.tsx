@@ -3,13 +3,19 @@ import ReactDOM from "react-dom";
 import { App } from "./App";
 import { createServer, Model } from "miragejs";
 
+function getStoredData(){
+  const data = localStorage.getItem("items")
+  if (!data) return []
+  return [...JSON.parse(data)]
+}
+
 createServer({
   models: {
     transaction: Model,
   },
   seeds(server) {
     server.db.loadData({
-      transactions: [...JSON.parse(localStorage.getItem("items") ||"" )|| null],
+      transactions: getStoredData(),
     });
   },
   routes() {
