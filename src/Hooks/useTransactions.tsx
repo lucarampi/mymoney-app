@@ -35,20 +35,9 @@ const TransactionsContext = createContext<TransactionsContextData>(
 export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
   useEffect(() => {
-    api.get(`transactions`).then((response) => {
-      setTransactions(() => {
-        if (!response.data.transactions) {
-          const localStoredData = JSON.parse(
-            localStorage.getItem("items") || ""
-          );
-          return localStoredData
-        }
-        localStorage.setItem(
-          "items",
-          JSON.stringify(response.data.transactions)
-        );
-        return response.data.transactions;
-      });
+    setTransactions(() => {
+      const localStoredData = JSON.parse(localStorage.getItem("items") || "");
+      return localStoredData;
     });
   }, []);
 
