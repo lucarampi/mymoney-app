@@ -42,6 +42,7 @@ table {
                 color: ${p.transparentize(0.5, '#000')};
             }
         }
+ 
 }
 
 `;

@@ -1,5 +1,5 @@
 import trashImg from "../../assets/trash-can.svg";
-import { DeleteButton } from "./styles";
+import { DeleteButton, TableData } from "./styles";
 import { useTransactions } from "../../Hooks/useTransactions";
 
 interface TransactionProps {
@@ -27,7 +27,7 @@ export function TransactionItem(transaction: TransactionProps) {
           currency: "BRL",
         }).format(value)}
       </td>
-      <td>{category}</td>
+      <td className={TableData}>{category}</td>
       <td>{new Intl.DateTimeFormat("pt-BR").format(new Date(createdAt))}</td>
       <td>
         <DeleteButton onClick={() => handleDeleteItem(id)}>
