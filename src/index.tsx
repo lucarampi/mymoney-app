@@ -9,7 +9,7 @@ createServer({
   },
   seeds(server) {
     server.db.loadData({
-      transactions: [...JSON.parse(localStorage.getItem("items") ||"" )],
+      transactions: [...JSON.parse(localStorage.getItem("items") ||"" )|| null],
     });
   },
   routes() {
